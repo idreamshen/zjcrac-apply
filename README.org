@@ -1,10 +1,10 @@
 * ZJ CRAC Apply
 
 ** 运行环境
-nodejs >=v18
+- Node.js >=v18
 
 ** 运行命令
-node index.js
+=node index.js=
 
 ** 配置文件
 配置文件为 conf/config.json
