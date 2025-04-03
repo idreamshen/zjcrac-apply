@@ -50,5 +50,5 @@
    #+end_src
 
    变更内容如下，已加粗
-   =<input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" *onclick="upimg(this)" type="file"* readonly="readonly">=
+   ~<input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" *onclick="upimg(this)" type="file"* readonly="readonly">~
 *** 提取 reqData 参数
