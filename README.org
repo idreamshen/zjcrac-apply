@@ -5,7 +5,9 @@
 - Node.js >=v18
 
 ** 运行命令
+#+begin_quote
 使用前请先修改配置文件 =conf/config.json=
+#+end_quote
 
 =node index.js=
 
