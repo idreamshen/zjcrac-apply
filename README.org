@@ -44,4 +44,5 @@
    - 将 upcropper 修改为 upimg，并追加 ~type="file"~ 属性
    - 修改前 ~<input data-name="field_xxx_photograph" onclick="upcropper(this)" ...>~
    - 修改后 ~<input data-name="field_xxx_photograph" onclick="upimg(this)" type="file" ...>~
+   [[/images/upimg.jpg]]
 *** 提取 reqData 参数
