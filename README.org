@@ -39,16 +39,21 @@
    #+end_src
    [[/images/landing.jpg]]
 3. 接下来就能正常显示表单，你可以进行信息填写
-4. 默认情况下在浏览器中无法完成“证件照”的上传，请按如下操作。
+4. 默认情况下在浏览器中无法完成“证件照”的上传，需要找到“证件照上传按钮”的 input 标签，并做如下修改：
+
+   将 upcropper 修改为 upimg，并追加 ~type="file"~ 属性
+
    修改前
    #+begin_src html
    <input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" onclick="upcropper(this)" readonly="readonly">
    #+end_src
+
    修改后
    #+begin_src html
    <input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" onclick="upimg(this)" type="file" readonly="readonly">
    #+end_src
 
-   变更内容如下
+   变更内容为
+
    *onclick="upimg(this)" type="file"*
 *** 提取 reqData 参数
