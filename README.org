@@ -35,6 +35,20 @@
    <div class="weui-model">
      <!--...-->
    </div>
-   <div style="position: fixed; left: ...">...</div>
+   <div style="position: fixed; left: ..."></div>
    #+end_src
    [[/images/landing.jpg]]
+3. 接下来就能正常显示表单，你可以进行信息填写
+4. 默认情况下在浏览器中无法完成“证件照”的上传，请按如下操作。
+   修改前
+   #+begin_src html
+   <input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" onclick="upcropper(this)" readonly="readonly">
+   #+end_src
+   修改后
+   #+begin_src html
+   <input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" onclick="upimg(this)" type="file" readonly="readonly">
+   #+end_src
+
+   变更内容如下，已加粗
+   =<input data-name="field_3359_photograph" class="weui-uploader__input" data-source="camera,album" data-value="295,413,jpg" data-file="" *onclick="upimg(this)" type="file"* readonly="readonly">=
+*** 提取 reqData 参数
