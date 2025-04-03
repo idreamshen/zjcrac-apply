@@ -39,10 +39,9 @@
    #+end_src
    [[/images/landing.jpg]]
 3. 接下来就能正常显示表单，你可以进行信息填写
-4. 默认情况下在浏览器中无法完成“证件照”的上传，需要找到“证件照上传按钮”的 input 标签，并做如下修改：
-   将 upcropper 修改为 upimg，并追加 ~type="file"~ 属性
-   修改前
-   ~<input data-name="field_xxx_photograph" onclick="upcropper(this)" ...>~
-   修改后
-   ~<input data-name="field_xxx_photograph" onclick="upimg(this)" type="file" ...>~
+4. 默认情况下在浏览器中无法完成“证件照”的上传，按如下操作
+   - 找到“证件照上传按钮”的 input 标签
+   - 将 upcropper 修改为 upimg，并追加 ~type="file"~ 属性
+   - 修改前 ~<input data-name="field_xxx_photograph" onclick="upcropper(this)" ...>~
+   - 修改后 ~<input data-name="field_xxx_photograph" onclick="upimg(this)" type="file" ...>~
 *** 提取 reqData 参数
