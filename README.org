@@ -71,3 +71,34 @@ Aid: 79
 *** 提取 reqData 参数
 1. 在“浏览器开发者控制台” Network 中找到最后一个 ~do=post~ 请求，复制为 =Copy as fetch(Node.js)=
    [[/images/copy.jpg]]
+2. 复制出的内容类似如下。请将第一行 { 和 最后一行 } 作为 reqData 值保存
+   #+begin_src js
+   fetch("https://wx.unoc.cn/app/index.php?i=5&c=entry&aid=79&do=post&m=dayu_workorder", {
+     "headers": {
+       "accept": "application/json",
+       "accept-language": "zh-CN,zh;q=0.9",
+       // ...
+     }
+   });
+   #+end_src
+*** 写入配置文件 reqData 参数
+conf/config.json
+#+begin_src js
+{
+  "reqDomain": "wx.unoc.cn",
+  "targetTime": "2025-04-03T15:25:00",
+  "reqData": {
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9",
+      // ...
+      "cookie": "dayu_oauth_fans=xxx",
+      "Referer": "https://wx.unoc.cn/app/index.php?i=5&c=entry&id=79&do=workorder&m=dayu_workorder",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "body": "field_3364_=https%3A%2F%2F...",
+    "method": "POST"
+  },
+  "urlAid": 79
+}
+#+end_src
