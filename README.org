@@ -1,1 +1,22 @@
 * ZJ CRAC Apply
+
+** 运行环境
+nodejs >=v18
+
+** 运行命令
+node index.js
+
+** 配置文件
+配置文件为 conf/config.json
+#+begin_src js
+{
+  // reqDomain 默认不需要修改，当测试时，可以修改为 examle.com
+  "reqDomain": "wx.unoc.cn",
+  // targetTime 目标时间
+  "targetTime": "2025-04-05T09:00:00",
+  // reqData 请求参数，需要提前抓包保存好
+  "reqData": null,
+  // 报名 id，需要提前抓包
+  "urlAid": 79
+}
+#+end_src
