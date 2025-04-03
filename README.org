@@ -1,11 +1,31 @@
 * ZJ CRAC Apply
-基于 nodejs 的表单提交例程
+基于 Node.js 的表单提交例程
 
 ** 运行环境
 - Node.js >=v18
 
 ** 运行命令
 =node index.js=
+
+控制台会有如下类似输出
+#+begin_example
+# node index.js
+Aid: 79
+请求地址为: https://example.com/app/index.php?i=5&c=entry&aid=79&do=post&m=dayu_workorder
+尝试请求
+请求结果: {"message":{"status":"0","title":"该报名未开始，详情请关注公众号！","msg":"请于 2025-04-05 09:00 后访问"},"redirect":"","type":"ajax"}
+目标时间: 2025-04-03T15:25:00
+剩余秒数: 15
+计划延迟 13174 毫秒后，重复执行任务 5 次
+计划延迟 14174 毫秒后，重复执行任务 10 次
+计划延迟 15074 毫秒后，重复执行任务 30 次
+计划延迟 15174 毫秒后，重复执行任务 50 次
+计划延迟 15224 毫秒后，重复执行任务 50 次
+计划延迟 15274 毫秒后，重复执行任务 20 次
+计划延迟 15374 毫秒后，重复执行任务 10 次
+计划延迟 16174 毫秒后，重复执行任务 5 次
+计划延迟 17174 毫秒后，重复执行任务 5 次
+#+end_example
 
 ** 配置文件
 配置文件为 conf/config.json
@@ -29,7 +49,7 @@
 2. 将手机浏览器地址复制，即为“报名落地页地址”
 *** 使用电脑填写报名信息
 1. 将“报名落地页地址”在电脑 Chrome 浏览器中打开（可能会跳转到登陆页，自行注册登陆）
-2. 打开浏览器开发者模式，将表单蒙层去除。
+2. 打开浏览器开发者控制台，将表单蒙层去除。
    你需要找到如下的两个 =div= 标签进行删除。
    #+begin_src html
    <div class="weui-model">
@@ -45,4 +65,8 @@
    - 修改前 ~<input data-name="field_xxx_photograph" onclick="upcropper(this)" ...>~
    - 修改后 ~<input data-name="field_xxx_photograph" onclick="upimg(this)" type="file" ...>~
    [[/images/upimg.jpg]]
+5. 所有信息填写完毕后，点击“立即提交”
+   [[/images/submit.jpg]]
+6. 如果有错误提示，请按提示修改表单内容直至正确
 *** 提取 reqData 参数
+1. 在“浏览器开发者控制台” Network 中找到最后一个 ~do=post~ 请求，复制为 =Copy as fetch(Node.js)=
