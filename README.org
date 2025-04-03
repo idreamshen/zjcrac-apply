@@ -2,7 +2,7 @@
 基于 Node.js 的表单提交例程
 
 ** 运行环境
-- Node.js >=v18
+- Node.js >= v18
 
 ** 运行命令
 #+begin_quote
