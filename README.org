@@ -57,6 +57,7 @@ Aid: 79
    </div>
    <div style="position: fixed; left: ..."></div>
    #+end_src
+
    [[/images/landing.jpg]]
 3. 接下来就能正常显示表单，你可以进行信息填写
 4. 默认情况下在浏览器中无法完成“证件照”的上传，按如下操作
@@ -64,12 +65,15 @@ Aid: 79
    - 将 upcropper 修改为 upimg，并追加 ~type="file"~ 属性
    - 修改前 ~<input data-name="field_xxx_photograph" onclick="upcropper(this)" ...>~
    - 修改后 ~<input data-name="field_xxx_photograph" onclick="upimg(this)" type="file" ...>~
+
    [[/images/upimg.jpg]]
 5. 所有信息填写完毕后，点击“立即提交”
+
    [[/images/submit.png]]
 6. 如果有错误提示，请按提示修改表单内容直至正确
 *** 提取 reqData 参数
 1. 在“浏览器开发者控制台” Network 中找到最后一个 ~do=post~ 请求，复制为 =Copy as fetch(Node.js)=
+
    [[/images/copy.jpg]]
 2. 复制出的内容类似如下。请将第一行 { 和 最后一行 } 作为 reqData 值保存
    #+begin_src js
