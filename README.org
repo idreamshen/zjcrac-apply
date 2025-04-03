@@ -37,3 +37,4 @@
    </div>
    <div style="position: fixed; left: ...">...</div>
    #+end_src
+   [[/images/landing.jpg]]
