@@ -42,7 +42,7 @@ Aid: 79
 }
 #+end_src
 
-** 获取 reqData 方式
+** 获取 reqData 参数
 
 *** 获取报名落地页地址
 1. 使用手机微信”扫描报名“二维码，并跳转至手机浏览器
@@ -66,7 +66,8 @@ Aid: 79
    - 修改后 ~<input data-name="field_xxx_photograph" onclick="upimg(this)" type="file" ...>~
    [[/images/upimg.jpg]]
 5. 所有信息填写完毕后，点击“立即提交”
-   [[/images/submit.jpg]]
+   [[/images/submit.png]]
 6. 如果有错误提示，请按提示修改表单内容直至正确
 *** 提取 reqData 参数
 1. 在“浏览器开发者控制台” Network 中找到最后一个 ~do=post~ 请求，复制为 =Copy as fetch(Node.js)=
+   [[/images/copy.png]]
